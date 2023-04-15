@@ -2,88 +2,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "poppins", sans-serif;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "poppins", sans-serif;
+	box-sizing: border-box;
 }
 
 
 /* Overriding colors for navbar */
 nav span a {
-    color: rgb(83, 161, 251);
+	color: rgb(83, 161, 251);
 }
 
 nav span a::after {
-    background: #0091ea;
+	background: #0091ea;
 }
 
 /*  */
 
 
 .main {
-    margin: 2%;
+	margin: 2%;
 }
 
 .card {
-    width: 20%;
-    display: inline-block;
-    box-shadow: 0px 0px 5px rgb(180, 176, 176);
-    border-radius: 5px;
-    margin: 2%;
+	width: 20%;
+	display: inline-block;
+	box-shadow: 0px 0px 5px rgb(180, 176, 176);
+	border-radius: 5px;
+	margin: 2%;
 }
 
 .image img {
-    height: 23vh;
-    width: 100%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+	height: 23vh;
+	width: 100%;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
 }
 
 .vote h2 {
-    text-align: center;
-    font-size: 30px;
-    color: rgb(18, 159, 34);
+	text-align: center;
+	font-size: 30px;
+	color: rgb(18, 159, 34);
 }
 
 .title {
 
-    text-align: center;
-    padding: 10px;
+	text-align: center;
+	padding: 10px;
 }
 
 h1 {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 .des {
-    padding: 15px;
-    text-align: left;
+	padding: 15px;
+	text-align: left;
 
-    padding-top: 1px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+	padding-top: 1px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 a:link :visited :hover :active {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 
 button {
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px;
 }
 
 button:hover {
-    background-color: rgb(18, 159, 34);
-    border: 1px solid rgb(18, 159, 34);
-    color: white;
-    transition: .5s;
-    cursor: pointer;
+	background-color: rgb(18, 159, 34);
+	border: 1px solid rgb(18, 159, 34);
+	color: white;
+	transition: .5s;
+	cursor: pointer;
 }
