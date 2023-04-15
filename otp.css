@@ -2,92 +2,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "poppins", sans-serif;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "poppins", sans-serif;
+	box-sizing: border-box;
 }
 
 body {
-    background: url(images/2bg.jpg) no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	background: url(images/2bg.jpg) no-repeat center center/cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .block-heading {
-    color: #ffffff;
-    font-size: 4rem;
-    font-weight: 550;
+	color: #ffffff;
+	font-size: 4rem;
+	font-weight: 550;
 }
 
 main {
-    background: #ffffff;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 100px;
-    border-radius: 4px;
-    box-shadow: 7px 7px 17px rgba(76, 76, 76, 0.552);
+	background: #ffffff;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+	border-radius: 4px;
+	box-shadow: 7px 7px 17px rgba(76, 76, 76, 0.552);
 
 }
 
 .voter-id {
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-    font-size: 1.6rem;
-    font-weight: 520;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	font-size: 1.6rem;
+	font-weight: 520;
 }
 
 .sentence {
-    display: flex;
-    justify-content: center;
-    color: rgb(128, 128, 128);
+	display: flex;
+	justify-content: center;
+	color: rgb(128, 128, 128);
 }
 
 .email {
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
+	display: flex;
+	justify-content: center;
+	font-weight: 600;
 }
 
 form {
-    text-align: center;
-    padding: 20px;
+	text-align: center;
+	padding: 20px;
 }
 
 .input-field {
-    margin: 20px;
-    width: 350px;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    display: flex;
-    background: #6eadf92a;
-    text-align: center;
-    font-size: 3rem;
+	margin: 20px;
+	width: 350px;
+	border: 0;
+	outline: 0;
+	border-radius: 5px;
+	display: flex;
+	background: #6eadf92a;
+	text-align: center;
+	font-size: 3rem;
 }
 
 
 .submit {
-    padding: 5px 15px;
-    font-size: 1.2rem;
-    border-radius: 7px;
-    border: none;
-    background-color: #0c6efc;
-    color: white;
+	padding: 5px 15px;
+	font-size: 1.2rem;
+	border-radius: 7px;
+	border: none;
+	background-color: #0c6efc;
+	color: white;
 }
 
 .resend {
-    margin: 20px;
-    justify-content: center;
-    display: flex;
-    color: rgb(128, 128, 128);
+	margin: 20px;
+	justify-content: center;
+	display: flex;
+	color: rgb(128, 128, 128);
 }
 
 .resend a {
-    color: #0c6efc;
-    text-decoration: none;
-    font-weight: 600;
+	color: #0c6efc;
+	text-decoration: none;
+	font-weight: 600;
 }
