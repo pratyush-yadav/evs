@@ -1,35 +1,35 @@
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 13vh;
-    width: 100%;
-    padding: 0 8%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 13vh;
+	width: 100%;
+	padding: 0 8%;
 }
 
 nav img {
-    padding-top: 20px;
-    width: 95px;
+	padding-top: 20px;
+	width: 95px;
 }
 
 nav span a {
-    padding: 5px 15px 5px 15px;
-    color: #fff;
-    position: relative;
-    text-decoration: none;
+	padding: 5px 15px 5px 15px;
+	color: #fff;
+	position: relative;
+	text-decoration: none;
 }
 
 nav span a::after {
-    content: '';
-    background: #ffffff;
-    width: 0;
-    height: 2px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: width 0.5s;
+	content: '';
+	background: #ffffff;
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: width 0.5s;
 }
 
 nav span a:hover::after {
-    width: 100%;
+	width: 100%;
 }
