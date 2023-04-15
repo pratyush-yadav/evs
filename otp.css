@@ -1,14 +1,14 @@
 /* google fonts import Poppins*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "poppins", sans-serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: url(images/2bg.jpg) no-repeat center center/cover;
     height: 100vh;
     display: flex;
@@ -16,97 +16,78 @@ body{
     align-items: center;
 }
 
-.block-heading{
+.block-heading {
     color: #ffffff;
     font-size: 4rem;
-    font-weight:550;
-    margin-bottom: 10px;
+    font-weight: 550;
 }
 
-.main-content{
+main {
     background: #ffffff;
     justify-content: center;
     align-items: center;
-    height: 450px;
-    width: 600px;
+    padding: 20px 100px;
     border-radius: 4px;
     box-shadow: 7px 7px 17px rgba(76, 76, 76, 0.552);
-    
+
 }
-.voter-id{
+
+.voter-id {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    padding: 30px;
     font-size: 1.6rem;
     font-weight: 520;
 }
-.sentence{
+
+.sentence {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
     color: rgb(128, 128, 128);
 }
-.email{
+
+.email {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
     font-weight: 600;
 }
-.form-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+
+form {
+    text-align: center;
+    padding: 20px;
 }
 
-
-h4{
-    font-weight: 500;
-    color: rgb(82, 82, 82);
-}
-.input-field{
-    background: #d1eaef4b;
-    width: 93%;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-}
-.input-field input{
-    width: 100%;
-    background: transparent;
+.input-field {
+    margin: 20px;
+    width: 350px;
     border: 0;
     outline: 0;
-    padding: 17px 15px;
-    font-size: 1.2rem;
-}
-.input-area{
-    display: flex;
-    justify-content: center;
-    margin: 0px 30px;
-}
-.input-area input{
-    margin-top: 20px;
-    padding: 15px 15px;
-    font-size: 1.2rem;
     border-radius: 5px;
+    display: flex;
+    background: #6eadf92a;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.submit {
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    border-radius: 7px;
     border: none;
     background-color: #0c6efc;
     color: white;
 }
-.resend{
-    
-    margin-top: 5px;
+
+.resend {
+    margin: 20px;
+    justify-content: center;
+    display: flex;
     color: rgb(128, 128, 128);
 }
-a{
+
+.resend a {
     color: #0c6efc;
     text-decoration: none;
     font-weight: 600;
-    
-}
-.align{
-    margin: 10px;
-    justify-content: center;
-    display: flex;
 }
