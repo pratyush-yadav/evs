@@ -35,6 +35,8 @@ main h1 {
 }
 
 main h3 {
+	font-weight: 500;
+	font-size: larger;
 	display: flex;
 	align-items: center;
 	justify-content: center;
