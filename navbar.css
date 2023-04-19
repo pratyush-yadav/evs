@@ -14,6 +14,8 @@ nav img {
 
 nav span a {
 	padding: 5px 15px 5px 15px;
+	font-weight: 500;
+	font-size: larger;
 	color: #fff;
 	position: relative;
 	text-decoration: none;
