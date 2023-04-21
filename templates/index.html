@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blockchain Based E-Voting system{% endblock title %}
+{% block css_file %}{% static 'home.css' %}{% endblock css_file %}
+
+{% block body %}
+
+	<main>
+		<h1>Blockchain Voting System</h1>
+
+		<div class="container">
+			<input type="text" placeholder=" &#x270e; Enter Voter Id" class="voterId">
+			<input type="Submit" value="Verify" class="submitBtn">
+		</div>
+
+		<h3>Don't have Voter Id? &nbsp; <a href="">Create One</a></h3>
+	</main>
+
+	<script src="homePage.js"></script>
+
+{% endblock body %}
