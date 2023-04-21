@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock title %}</title>
+	<link rel="stylesheet" type="text/css" href={% static 'navbar.css' %}>
+	<link rel="stylesheet" type="text/css" href={% block css_file %}{% endblock css_file %}>
+</head>
+
+<body>
+    <nav>
+		<img src="images/eci-logo.png" alt="logo">
+		<span>
+			<a href="">Home</a>
+			<a href="about.html">About</a>
+			<a href="votingPage.html">Vote</a>
+			<a href="">Contact</a>
+		</span>
+	</nav>
+
+    {% block body %}{% endblock body %}
+    
+</body>
+
+</html>
