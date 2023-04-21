@@ -8,5 +8,5 @@ def index(request):
 def about(request):
     return render(request, "about.html")
 
-def votingPage(request):
-    return render(request, "votingPage.html")
+def vote(request):
+    return render(request, "vote.html")
