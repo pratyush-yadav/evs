@@ -16,10 +16,10 @@
     <nav>
 		<img src="images/eci-logo.png" alt="logo">
 		<span>
-			<a href="">Home</a>
-			<a href="about.html">About</a>
-			<a href="votingPage.html">Vote</a>
-			<a href="">Contact</a>
+			<a href={% url 'index.html' %}>Home</a>
+			<a href={% url 'about.html' %}>About</a>
+			<a href={% url 'votingPage.html' %}>Vote</a>
+			<a href={% url 'index.html' %}>Contact</a>
 		</span>
 	</nav>
 
