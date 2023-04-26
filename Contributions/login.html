@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link href="login.css" rel="stylesheet">
+    <link href="nav.css" rel="stylesheet">
+    
+<div class="header">
+    <nav class="nav-links">
+        <img src="Images/eci-logo.png.png" class="logo"> </img>
+        <ul>
+            <li><h4><a href="homePage.html">Home</a></h4></li>
+            <li><h4><a href="">About</a></h4></li>
+            <li><h4><a href="">Contact</a></h4></li>
+            
+        </ul>
+    </nav>
+</div>
+
+</head>
+<body>
+    <h1>Admin Login</h1>
+    <form action="" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit" onclick="auth()">
+    </form>
+    
+<script>
+    function auth(){
+        var username = document.querySelector('#username').value;
+        var password = document.querySelector('#password').value;
+        if(username=="admin123@gmail" && password=="admin123"){
+            window.location.assign("page2.html");
+            alert("Login Successfull");
+        }
+        else{
+            alert("Invalid Information");
+            return;
+        }
+        }
+    
+</script>
+</body>
+</html>
