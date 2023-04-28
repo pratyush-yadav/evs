@@ -9,10 +9,13 @@
 	<main>
 		<h1>Blockchain Voting System</h1>
 
-		<div class="container">
-			<input type="text" placeholder=" &#x270e; Enter Voter Id" class="voterId">
-			<input type="Submit" value="Verify" class="submitBtn">
-		</div>
+		<form action="login" method="post">
+			<div class="container">
+				{% csrf_token %}
+				<input type="text" placeholder=" &#x270e; Enter Voter Id" class="voterId" name="voterId">
+				<input type="Submit" value="Verify" class="submitBtn">
+			</div>
+		</form>
 
 		<h3>Don't have Voter Id? &nbsp; <a class= "create" href="https://www.nvsp.in/">Create One</a></h3>
 	</main>
