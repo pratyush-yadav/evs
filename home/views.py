@@ -10,3 +10,10 @@ def about(request):
 
 def vote(request):
     return render(request, "vote.html")
+
+
+def login(request):
+    voterId = request.POST.get("voterId", False)
+    print("voterId: ", voterId)
+    return HttpResponse("voterId: " + voterId)
+
