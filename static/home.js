@@ -1,17 +1,19 @@
-let submitBtn = document.querySelector(".submitBtn");
-let voterId = document.querySelector(".voterId");
-let text = document.querySelector(".content h3");
+const form = document.querySelector('form');
+const voterId = document.querySelector(".voterId");
+const submitBtn = document.querySelector(".submitBtn");
 
-let regex = /^[A-Z]{3}[0-9]{7}$/;
+form.addEventListener('submit', function (e) {
+    // prevent form submission by default
+    e.preventDefault();
 
-submitBtn.addEventListener("click", () => {
-	if (voterId.value == "") {
-		text.innerText = "Please Enter a Voter Id";
-	}
-	else if (voterId.value.match(regex)) {
-		text.innerText = "Valid Voter Id"
-	}
-	else {
-		text.innerText = "Invalid Voter Id";
-	}
-}); 
+	//voterID validation
+	submitBtn.addEventListener("click", () => {
+		if (voterId.value.match(/^[A-Z]{3}[0-9]{7}$/)) {
+			form.submit();
+		}
+		else {
+			alert("Invalid Voter Id");
+		}
+	});
+});
+
