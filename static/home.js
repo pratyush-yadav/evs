@@ -3,17 +3,23 @@ const voterId = document.querySelector(".voterId");
 const submitBtn = document.querySelector(".submitBtn");
 
 form.addEventListener('submit', function (e) {
-    // prevent form submission by default
-    e.preventDefault();
+	// prevent form submission by default
+	e.preventDefault();
+});
 
-	//voterID validation
-	submitBtn.addEventListener("click", () => {
-		if (voterId.value.match(/^[A-Z]{3}[0-9]{7}$/)) {
-			form.submit();
-		}
-		else {
-			alert("Invalid Voter Id");
-		}
-	});
+voterId.addEventListener('input', function (e) {
+	if (voterId.value.match(/^[A-Z]{3}[0-9]{7}$/)) {
+		voterId.style.color = "green"
+	} else {
+		voterId.style.color = "black"
+	}
+});
+
+submitBtn.addEventListener("click", () => {
+	if (voterId.value.match(/^[A-Z]{3}[0-9]{7}$/)) {
+		form.submit();
+	} else {
+		voterId.style.color = "red"
+	}
 });
 
