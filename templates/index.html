@@ -12,7 +12,7 @@
 		<form action="login" method="post">
 			<div class="container">
 				{% csrf_token %}
-				<input type="text" placeholder=" &#x270e; Enter Voter Id" class="voterId" name="voterId">
+				<input type="text" name="voterId" class="voterId" placeholder=" &#x270e; Enter Voter Id" oninput="this.value = this.value.toUpperCase()">
 				<input type="Submit" value="Verify" class="submitBtn">
 			</div>
 		</form>
