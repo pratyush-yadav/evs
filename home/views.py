@@ -17,6 +17,7 @@ def login(request):
     print("voterId: ", voterId)
     return render(request, "otp.html")
 
+
 def submit_otp(request):
     otp = request.POST.get("otp", False)
     print(otp)
@@ -24,4 +25,8 @@ def submit_otp(request):
         return render(request, "vote.html")
     else:
         return HttpResponse("INCORRECT OTP")
-    
+
+
+def waitPage(request):
+    return render(request, "waitPage.html")
+
