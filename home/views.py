@@ -17,3 +17,11 @@ def login(request):
     print("voterId: ", voterId)
     return render(request, "otp.html")
 
+def submit_otp(request):
+    otp = request.POST.get("otp", False)
+    print(otp)
+    if otp=="123456":#dummy OTP
+        return render(request, "vote.html")
+    else:
+        return HttpResponse("INCORRECT OTP")
+    
