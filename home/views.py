@@ -15,5 +15,5 @@ def vote(request):
 def login(request):
     voterId = request.POST.get("voterId", False)
     print("voterId: ", voterId)
-    return HttpResponse("voterId: " + voterId)
+    return render(request, "otp.html")
 
