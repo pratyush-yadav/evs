@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blockchain Based E-Voting system{% endblock title %}
+{% block css_file %}{% static 'css/otp.css' %}{% endblock css_file %}
+
+{% block body %}
+
+	<div class="block-heading">Blockchain Voting System</div>
+
+	<main>
+		{% comment %} dummy details {% endcomment %}
+		<div class="voter-id">Aadhar No : 987291235768</div>
+		<div class="sentence">Enter your 6 digit verificaton code we sent to</div>
+		<div class="email">*****dummy-email@gmail.com</div>
+
+		<form action="submit_otp" method="post">
+			{% csrf_token %}
+			<input type="text" name="otp" class="input-field" pattern="[0-9]{6}" title="6 Digit number" maxlength="6" autofocus placeholder="OTP" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" />
+			<input type="submit" value="Submit" class="submit">
+		</form>
+
+		<div class="resend">Didn't get the code? &nbsp; <a href="">Resend</a></div>
+	</main>
+
+{% endblock body %}
+
