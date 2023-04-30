@@ -8,4 +8,5 @@ urlpatterns = [
     path('vote', views.vote, name='vote'),
     path("login", views.login, name="login"),
     path("submit_otp", views.submit_otp, name="submit_otp"),
+    path("waitPage", views.waitPage, name="waitPage"),
 ]
