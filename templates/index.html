@@ -12,7 +12,7 @@
 		<form action="login" method="post">
 			<div class="container">
 				{% csrf_token %}
-				<input type="text" name="voterId" class="voterId" autofocus placeholder=" &#x270e; Enter Voter Id" oninput="this.value = this.value.toUpperCase()">
+				<input type="text" name="voterId" class="voterId" autocomplete="off" autofocus placeholder=" &#x270e; Enter Voter Id" oninput="this.value = this.value.toUpperCase()">
 				<input type="Submit" value="Verify" class="submitBtn">
 			</div>
 		</form>
