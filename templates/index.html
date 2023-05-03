@@ -9,7 +9,7 @@
 	<main>
 		<h1>Blockchain Voting System</h1>
 
-		<form action="login" method="post">
+		<form action="send_otp" method="post">
 			<div class="container">
 				{% csrf_token %}
 				<input type="text" name="voterId" class="voterId" autocomplete="off" autofocus placeholder=" &#x270e; Enter Voter Id" oninput="this.value = this.value.toUpperCase()">
