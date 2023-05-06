@@ -20,10 +20,7 @@
     <nav>
 		<img src={% static 'images/eci-logo.png' %} alt="logo">
 		<span>
-			<a href={% url 'index' %}>Home</a>
-			<a href={% url 'about' %}>About</a>
-			<a href={% url 'vote' %}>Vote</a>
-			<a href={% url 'index' %}>Contact</a>
+			{% block nav_items %}{% endblock nav_items %}
 		</span>
 	</nav>
 
