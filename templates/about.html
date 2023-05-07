@@ -4,8 +4,20 @@
 {% block title %}About page{% endblock title %}
 {% block css_file %}{% static 'css/about.css' %}{% endblock css_file %}
 
+
+{% block nav_items %}
+    {% if request.session.authentication_status == "logged_in" %}
+        <a href="javascript: history.back()">Back</a>
+        <a href={% url 'contact' %}>Contact</a>
+        <a href={% url 'logout' %}>Logout</a>
+    {% else %}
+        <a href={% url 'index' %}>Home</a>
+        <a href={% url 'contact' %}>Contact</a>
+    {% endif %}
+{% endblock nav_items %}
+
+
 {% block body %}
-	
 	<main>
 		<h1>Decentralized Voting System using Blockchain</h1>
 		<hr>
@@ -32,5 +44,4 @@
 			Its also a fast and secure way to cast your vote.
 		</div>
 	</main>
-
 {% endblock body %}
