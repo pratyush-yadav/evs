@@ -4,6 +4,13 @@
 {% block title %}Blockchain Based E-Voting system{% endblock title %}
 {% block css_file %}{% static 'css/otp.css' %}{% endblock css_file %}
 
+
+{% block nav_items %}
+	<a href={% url 'about' %}>About</a>
+	<a href={% url 'contact' %}>Contact</a>
+{% endblock nav_items %}
+
+
 {% block body %}
 
 	<div class="block-heading">Blockchain Voting System</div>
