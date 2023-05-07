@@ -5,6 +5,13 @@
 {% block css_file %}{% static 'css/vote.css' %}{% endblock css_file %}
 
 
+{% block nav_items %}
+	<a href={% url 'about' %}>About</a>
+	<a href={% url 'contact' %}>Contact</a>
+	<a href={% url 'logout' %}>Logout</a>
+{% endblock nav_items %}
+
+
 {% block body %}
 	<div class="vote">
 		<h2>Cast Your Vote Here</h2>
