@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: url('/static/images/bg.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    /* background: #ed9797; */
+    height: 80%;
+    width: 70%;
+}
+
+.contact-box {
+    background: #ffffff;
+    border-radius: 2% 45% 45% 2% / 4% 47% 48% 4%;
+    display: flex;
+}
+
+.contact-left {
+    flex-basis: 60%;
+    padding: 30px 60px;
+}
+
+.contact-right {
+    flex-basis: 40%;
+    padding: 40px;
+    background: #0c6efc;
+    color: #ffffff;
+    border-radius: 0% 45% 45% 0% / 10% 47% 48% 10%;
+
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+    color: #0c6efc;
+}
+
+button {
+    background: #0c6efc;
+    width: 100px;
+    border: none;
+    color: #ffffff;
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.contact-left h2 {
+    color: #0047b0;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-right h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.connect h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+tr td:first-child {
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}

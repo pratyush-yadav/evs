@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About page{% endblock title %}
+{% block css_file %}{% static 'css/contact.css' %}{% endblock css_file %}
+
+
+{% block body %}
+
+<div class="connect"><h1>Connect With Us</h1></div>
+<div class="container">
+    <div class="contact-box">
+        <div class="contact-left">
+            <h2>Send your request</h2>
+            <form action="">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Name </label>
+                        <input type="text" placeholder=" Jhonny Sins">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone  </label>
+                        <input type="text" placeholder=" +91 95482 39473">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Email </label>
+                        <input type="text" placeholder=" jhonnysins@pornhub.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Aadhar Id</label>
+                        <input type="text" placeholder=" ABC7654321">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder=" dgfug udfiufyuh">
+                    </div>
+                </div>
+                
+                <label >Message</label>
+                <textarea name="" id="" placeholder="Your message here" rows="4"></textarea>
+                
+                <button>Send</button> 
+                
+            </form>
+        </div>
+        <div class="contact-right">
+            <h2>Reach Us</h2>
+            
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>contactus@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>+91 100 200 3050,<br>+91 100 200 3040</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td>Pod-1 TF-16, ITM University, Uparwara, New Raipur,<br> Chhattishgarh, India</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
