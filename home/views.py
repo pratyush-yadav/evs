@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 # Create your views here.
@@ -30,6 +30,8 @@ def submit_otp(request):
         return render(request, "vote.html")
     else:
         return HttpResponse("INCORRECT OTP")
+def logout(request):
+    return redirect('index')
 
 
 def waitPage(request):
