@@ -22,6 +22,7 @@ def waitPage(request):
 
 
 def logout(request):
+    request.session["authentication_status"] = "logged_out"
     return redirect('index')
 
 
