@@ -17,16 +17,12 @@ def vote(request):
     return render(request, "vote.html")
 
 
-def login(request):
-    voterId = request.POST.get("voterId", False)
-    print("voterId: ", voterId)
-    return render(request, "otp.html")
+def waitPage(request):
+    return render(request, "waitPage.html")
 
 
 def logout(request):
     return redirect('index')
 
 
-def waitPage(request):
-    return render(request, "waitPage.html")
 
