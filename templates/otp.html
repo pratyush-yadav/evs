@@ -20,7 +20,7 @@
 		<div class="sentence">Enter your 6 digit verificaton code we sent to</div>
 		<div class="email">*****dummy-email@gmail.com</div>
 
-		<form action="submit_otp" method="post">
+		<form action="index" method="post">
 			{% csrf_token %}
 			<input type="text" name="otp" class="input-field" pattern="[0-9]{6}" title="6 Digit number" maxlength="6" autofocus placeholder="OTP" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" />
 			<input type="submit" value="Submit" class="submit">
