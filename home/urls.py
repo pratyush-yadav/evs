@@ -8,4 +8,5 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('vote', views.vote, name='vote'),
     path("waitPage", views.waitPage, name="waitPage"),
+    path('logout', views.logout, name='logout'),
 ]
