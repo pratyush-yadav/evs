@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from random import randint
 
 # Create your views here.
 def index(request):
@@ -26,4 +27,9 @@ def logout(request):
     return redirect('index')
 
 
+# NON page related functions
+def generate_otp():
+    otp = randint(100000,999999)
+    # code for sending OTP will be added later...
+    return str(otp)
 
