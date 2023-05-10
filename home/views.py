@@ -4,6 +4,9 @@ from random import randint
 
 # Create your views here.
 def index(request):
+    request.session["authentication_status"] = "not_logged_in"
+    request.session["voter_id"] = None
+    request.session["otp"] = None
     return render(request, "index.html")
 
 def about(request):
