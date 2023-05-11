@@ -11,6 +11,21 @@ def index(request):
         request.session["otp"] = generate_otp(mail_id="dummy-email@gmail.com")
         return render(request, "otp.html")
     
+    elif request.method=="POST" and request.session.get("authentication_status") in ("voter_id_entered", "login_failed"):
+        # When OTP is submitted...
+        sent_otp = request.session.get("otp", False)
+        entered_otp = request.POST.get("otp", False)
+        if entered_otp == sent_otp:
+            # User entered corret OTP...
+            request.session["authentication_status"] = "logged_in"
+            # redirection will be based on the voting status as per user and date/time...
+            # will be working on it later...
+            return redirect("vote")
+        else:
+            # User entered incorret OTP...
+            request.session["authentication_status"] = "login_failed"
+            return render(request, "otp.html")
+        
     else:
         # when site is normally visited
         request.session["authentication_status"] = "not_logged_in"
