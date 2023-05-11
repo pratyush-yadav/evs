@@ -4,10 +4,20 @@ from random import randint
 
 # Create your views here.
 def index(request):
-    request.session["authentication_status"] = "not_logged_in"
-    request.session["voter_id"] = None
-    request.session["otp"] = None
-    return render(request, "index.html")
+    if request.method=="POST" and request.session.get("authentication_status") == "not_logged_in":
+        # When voter ID is submitted...
+        request.session["authentication_status"] = "voter_id_entered"
+        request.session["voter_id"] = request.POST.get("voterId")
+        request.session["otp"] = generate_otp(mail_id="dummy-email@gmail.com")
+        return render(request, "otp.html")
+    
+    else:
+        # when site is normally visited
+        request.session["authentication_status"] = "not_logged_in"
+        request.session["voter_id"] = None
+        request.session["otp"] = None
+        return render(request, "index.html")
+
 
 def about(request):
     return render(request, "about.html")
