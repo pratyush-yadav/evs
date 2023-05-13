@@ -18,14 +18,14 @@ def index(request):
         if entered_otp == sent_otp:
             # User entered corret OTP...
             request.session["authentication_status"] = "logged_in"
-            messages.SUCCESS(request, "User logged in successfully !!!")
+            messages.success(request, "User logged in successfully !!!")
             # redirection will be based on the voting status as per user and date/time...
             # will be working on it later...
             return redirect("vote")
         else:
             # User entered incorret OTP...
             request.session["authentication_status"] = "login_failed"
-            messages.ERROR(request, "Incorrect OTP !!!")
+            messages.error(request, "Incorrect OTP !!!")
             return render(request, "otp.html")
         
     else:
@@ -33,6 +33,7 @@ def index(request):
         request.session["authentication_status"] = "not_logged_in"
         request.session["voter_id"] = None
         request.session["otp"] = None
+        messages.info(request, "Info: Site normally visited...")
         return render(request, "index.html")
 
 
