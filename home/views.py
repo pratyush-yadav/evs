@@ -43,7 +43,10 @@ def contact(request):
 
 
 def vote(request):
-    return render(request, "vote.html")
+    if request.session.get("authentication_status")=="logged_in":
+        return render(request, "vote.html")
+    else:
+        return redirect("index")
 
 
 def waitPage(request):
