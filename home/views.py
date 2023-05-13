@@ -24,6 +24,7 @@ def index(request):
         else:
             # User entered incorret OTP...
             request.session["authentication_status"] = "login_failed"
+            messages.ERROR(request, "Incorrect OTP !!!")
             return render(request, "otp.html")
         
     else:
