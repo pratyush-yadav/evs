@@ -1,0 +1,32 @@
+{% if message %}
+
+<div id="message-container">{{message}}
+    <button id="close" onclick="this.parentElement.remove()">X</button>
+</div>
+
+<style>
+    #message-container{
+        background-color: lightgrey;
+        color: grey;
+        font-weight: bold;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 7px;
+        cursor: default;
+    }
+
+    #close{
+        background-color: inherit;
+        color: inherit;
+        font-size: 20px;
+        font-weight: 600;
+        position: absolute;
+        top: 7px;
+        right: 20px;
+        width: 40px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+{% endif %}
