@@ -24,7 +24,7 @@ def index(request):
         else:
             # User entered incorret OTP...
             request.session["authentication_status"] = "login_failed"
-            return render(request, "otp.html")
+            return render(request, "otp.html", {"message": "Incorrect OTP !!!"})
         
     elif request.session.get("authentication_status")=="logged_out":
         # when user logged out
