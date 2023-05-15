@@ -26,6 +26,13 @@ def index(request):
             request.session["authentication_status"] = "login_failed"
             return render(request, "otp.html")
         
+    elif request.session.get("authentication_status")=="logged_out":
+        # when user logged out
+        request.session["authentication_status"] = "not_logged_in"
+        request.session["voter_id"] = None
+        request.session["otp"] = None
+        return render(request, "index.html", {"message": "User logged out successfully !!!"})
+    
     else:
         # when site is normally visited
         request.session["authentication_status"] = "not_logged_in"
