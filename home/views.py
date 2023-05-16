@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.views.decorators.cache import never_cache
 from random import randint
 
 # Create your views here.
+@never_cache
 def index(request):
     if request.method=="POST" and request.session.get("authentication_status") == "not_logged_in":
         # When voter ID is submitted...
@@ -49,6 +51,7 @@ def contact(request):
     return render(request, "contact.html")
 
 
+@never_cache
 def vote(request):
     if request.session.get("authentication_status")=="logged_in":
         return render(request, "vote.html")
