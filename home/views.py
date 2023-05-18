@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.cache import never_cache
 from random import randint
+import smtplib
 
 # Create your views here.
 @never_cache
@@ -69,8 +70,30 @@ def logout(request):
 
 
 # NON page related functions
-def generate_otp():
+def generate_and_send_otp(recipient):
     otp = randint(100000,999999)
-    # code for sending OTP will be added later...
+    
+    message = f"Subject: OTP for evs\n\n{otp} is your OTP for login to e-Voting System. For security reasons, do not share this OTP with anyone."
+
+    try:
+        # read sender's email_id and app_password from file...
+        # with open("mail_credentials.txt") as mail:
+        with open("static/mail_credentials.txt") as mail:
+            sender, password = mail.read().split("\n")
+
+        # sending otp email...
+        with smtplib.SMTP(host="smtp.gmail.com", port=587) as server:
+            # context = ssl.create_default_context()
+            # server.starttls(context=context)
+            server.starttls()
+            server.login(sender, password)
+            server.sendmail(from_addr=sender, to_addrs=recipient, msg=message)
+    
+    except FileNotFoundError:
+        print("Unable to send OTP : (Login credentials not found !)...")
+    
+    except Exception as e:
+        print("Unable to send OTP : (no internet)...")
+    
     return str(otp)
 
