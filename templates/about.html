@@ -9,7 +9,7 @@
     {% if request.session.authentication_status == "logged_in" %}
         <a href="javascript: history.back()">Back</a>
         <a href={% url 'contact' %}>Contact</a>
-        <a href={% url 'logout' %}>Logout</a>
+        {% include 'include/logout.html' %}
     {% else %}
         <a href={% url 'index' %}>Home</a>
         <a href={% url 'contact' %}>Contact</a>
