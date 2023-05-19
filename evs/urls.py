@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import RedirectView
+from django.templatetags.static import static
 
 admin.site.site_header = "E Voting System"
 admin.site.site_title = "E Voting System"
@@ -23,5 +25,6 @@ admin.site.index_title = "E Voting System"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('favicon.ico', RedirectView.as_view(url=static('favicon/favicon.ico'))),
     path('', include('home.urls')),
 ]
