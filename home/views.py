@@ -93,7 +93,7 @@ def generate_and_send_otp(recipient):
         print("Unable to send OTP : (Login credentials not found !)...")
     
     except Exception as e:
-        print("Unable to send OTP : (no internet)...")
+        print("Unable to send OTP : (Cannot connect to internet)...")
     
     return str(otp)
 
