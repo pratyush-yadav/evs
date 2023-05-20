@@ -11,4 +11,4 @@ class Voter(models.Model):
     email = models.EmailField()
     
     def __str__(self):
-        return f"{self.voter_id} {self.name}"
+        return f"{self.voter_id} ({self.name})"
