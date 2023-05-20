@@ -72,12 +72,12 @@ def logout(request):
 # NON page related functions
 def generate_and_send_otp(recipient):
     otp = randint(100000,999999)
+    print(f"@generate_otp: Generated OTP:....................................................     {otp}    <<<<<")
     
     message = f"Subject: OTP for evs\n\n{otp} is your OTP for login to e-Voting System. For security reasons, do not share this OTP with anyone."
 
     try:
         # read sender's email_id and app_password from file...
-        # with open("mail_credentials.txt") as mail:
         with open("static/mail_credentials.txt") as mail:
             sender, password = mail.read().split("\n")
 
