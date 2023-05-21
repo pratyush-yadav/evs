@@ -11,12 +11,13 @@ def index(request):
     if request.method=="POST" and request.session.get("authentication_status") == "not_logged_in":
         # When voter ID is submitted...
         request.session["authentication_status"] = "voter_id_entered"
-        return render(request, "otp.html")
         voter_id = request.POST.get("voterId")
         request.session["voter_id"] = voter_id
         # check if the voter id is valid and fetch its email id...
         try:
             email = Voter.objects.get(voter_id=voter_id).email
+            request.session["otp"] = generate_and_send_otp(recipient=email)
+            return render(request, "otp.html")
         except Voter.DoesNotExist:
             request.session["authentication_status"] = "not_logged_in"
             return render(request, "index.html", {"message": "Invalid Voter ID : please enter a valid Voter ID !!!"})
