@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.decorators.cache import never_cache
 from random import randint
 import smtplib
+from .models import Voter
 
 # Create your views here.
 @never_cache
@@ -10,9 +11,15 @@ def index(request):
     if request.method=="POST" and request.session.get("authentication_status") == "not_logged_in":
         # When voter ID is submitted...
         request.session["authentication_status"] = "voter_id_entered"
-        request.session["voter_id"] = request.POST.get("voterId")
-        request.session["otp"] = generate_otp(mail_id="dummy-email@gmail.com")
         return render(request, "otp.html")
+        voter_id = request.POST.get("voterId")
+        request.session["voter_id"] = voter_id
+        # check if the voter id is valid and fetch its email id...
+        try:
+            email = Voter.objects.get(voter_id=voter_id).email
+        except Voter.DoesNotExist:
+            request.session["authentication_status"] = "not_logged_in"
+            return render(request, "index.html", {"message": "Invalid Voter ID : please enter a valid Voter ID !!!"})
     
     elif request.method=="POST" and request.session.get("authentication_status") in ("voter_id_entered", "login_failed"):
         # When OTP is submitted...
