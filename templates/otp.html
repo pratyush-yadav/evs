@@ -18,7 +18,7 @@
 	<main>
 		<div class="voter-id">Voter ID : {{request.session.voter_id}}</div>
 		<div class="sentence">Enter your 6 digit verificaton code we sent to</div>
-		<div class="email">*****dummy-email@gmail.com</div>
+		<div class="email">{{email}}</div>
 
 		<form action="index" method="post">
 			{% csrf_token %}

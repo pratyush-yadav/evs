@@ -17,7 +17,7 @@ def index(request):
         try:
             email = Voter.objects.get(voter_id=voter_id).email
             request.session["otp"] = generate_and_send_otp(recipient=email)
-            return render(request, "otp.html")
+            return render(request, "otp.html", {"email": email[:2]+"**********"+"@"+email.split("@")[-1]})
         except Voter.DoesNotExist:
             request.session["authentication_status"] = "not_logged_in"
             return render(request, "index.html", {"message": "Invalid Voter ID : please enter a valid Voter ID !!!"})
