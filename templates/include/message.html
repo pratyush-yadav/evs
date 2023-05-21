@@ -1,7 +1,7 @@
 {% if message %}
 
-<div id="message-container">{{message}}
-    <button id="close" onclick="this.parentElement.remove()">X</button>
+<div id="message-container" onclick="this.remove()">{{message}}
+    <button id="close">X</button>
 </div>
 
 <style>
@@ -13,7 +13,7 @@
         margin: 5px;
         width: 99vw;
         border-radius: 7px;
-        cursor: default;
+        cursor: pointer;
     }
 
     #close{
