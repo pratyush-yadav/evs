@@ -1,6 +1,6 @@
 Why do we need it?
 
-Current voting systems like ballot box voting or electronic voting suffer from various security threats such as DDoS attacks, polling booth capturing, vote alteration and manipulation, malware attacks, etc, and also require huge amounts of paperwork, human resources, and time. This creates a sense of distrust among existing systems.
+Current voting systems like ballot box voting or electronic voting suffer from various security threats such as polling booth capturing, vote alteration and manipulation, etc, and also require huge amounts of paperwork, human resources, and time. This creates a sense of distrust among existing systems.
 
 
 Some of the disadvantages are:
